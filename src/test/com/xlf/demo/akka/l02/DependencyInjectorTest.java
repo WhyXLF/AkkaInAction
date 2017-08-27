@@ -18,7 +18,7 @@ import java.util.concurrent.TimeoutException;
  * description:
  */
 public class DependencyInjectorTest {
-    static ActorSystem system = null;
+    private static ActorSystem system = null;
 
     @BeforeClass
     public static void beforeClass() {
@@ -39,8 +39,5 @@ public class DependencyInjectorTest {
         final String applicationContext = "...";
 
         final ActorRef myActor = getContext().actorOf(Props.create(DependencyInjector.class, applicationContext, "TheActor"), "TheActor");
-
-        myActor.tell("hello", ActorRef.noSender());
     }
-
 }
