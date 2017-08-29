@@ -16,6 +16,6 @@ public class Parent extends AbstractActor{
             "/user/workers/w3");
     @Override
     public Receive createReceive() {
-        return ;
+        return null;
     }
 }
